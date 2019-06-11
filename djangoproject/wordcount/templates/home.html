@@ -1,10 +1,58 @@
-<h1>안녕하세요, 여기서 글자를 세세요! </h1>
+<!DOCTYPE html>
+<html>
 
-<a href = "{%url 'about'%}">ABOUT</a>
-<br>
-<form action = "{%url 'result'%}">
-    <textarea cols = "40" rows = "10" name = "fulltext"></textarea>
-    <br>
-    <input type = "submit" value = "count!">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+            h1{
+                color:black;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 50%;
+                text-align: center;
+            }
+            form{
+                color:red;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 50%;
+                text-align: center;
+            }
+            a{
+                color:blue;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 50%;
+                text-align: center;
+            }
+            p{
+                color:blue;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 50%;
+                text-align: center;
+            }
+    </style>
+</head>
 
-</form>
+<body>
+        <br><br><br>
+    <h1>어서오세요, 멋쟁이 사자처럼 wordcount 서비스입니다.
+         여기서 단어를 세세요! </h1>
+    <br><br><br>
+    <a href = "{%url 'about'%}">ABOUT page</a>
+    <br><br><br><br><br>
+    <p>아래에 텍스트를 입력하세요</p>
+    <form action = "{%url 'result'%}">
+        <textarea cols = "40" rows = "10" name = "fulltext"></textarea>
+        <br>
+        <input type = "submit" value = "count!">
+
+    </form>
+</body>
+
+</html>
