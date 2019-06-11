@@ -1,5 +1,5 @@
 from django.shortcuts import render
-
+import re
 # Create your views here.
 
 def home(request):
@@ -10,8 +10,9 @@ def about(request):
 
 def result(request):
     text = request.GET['fulltext']
-    words = text.split()
+    words = re.findall('\w+',text)
     word_dictionary = {}
+
 
     for word in words:
         if word in word_dictionary:
